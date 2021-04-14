@@ -1,0 +1,282 @@
+html, body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 15fr 75fr 10fr;
+    grid-template-areas: "header header header" "main main aside" "footer footer footer";
+    height: 100vh;
+    font-family: 'Oswald', sans-serif;
+}
+
+.header-container {
+    grid-area: header;
+    display: grid;
+    background-color: green;
+    grid-template-columns: 7fr 2fr 1fr;
+    grid-template-rows: 6fr 4fr;
+    grid-template-areas: "welcome . logout" "options options options";
+}
+
+.options {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: darkgreen;
+    color: white;
+    justify-items: center;
+    align-items: center;
+    grid-area: options;
+    grid-template-rows: 50px;
+}
+
+.title {
+    grid-area: welcome;
+    justify-self: center;
+    align-self: center;
+    color: white;
+}
+
+.logout {
+    grid-area: logout;
+    justify-self: center;
+    align-self: center;
+    padding: 5px;
+    background-color: white;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: white;
+}
+
+.transfer-container {
+    grid-area: main;
+    background-color: lightgray;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 4fr;
+    row-gap: 15px;
+    justify-items: center;
+    border-style: solid;
+    border-color: green;
+    overflow: scroll;
+}
+
+.transfer-label {
+    justify-self: center;
+}
+
+.transfer-submit {
+    border: none;
+    outline: 0;
+    padding: 10px;
+    color: white;
+    background-color: darkgreen;
+    text-align: center;
+    cursor: pointer;
+    height: 40px;
+    display: inline-block;
+    border-radius: 10%;
+    justify-self: center;
+}
+
+.aside-container {
+    grid-area: aside;
+    background-color: lightgreen;
+    border-style: solid;
+    border-color: black;
+}
+
+.accounts {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    row-gap: 10px;
+    justify-items: center;
+}
+
+.footer-container {
+    grid-area: footer;
+    background-color: green;
+    column-gap: 50px;
+    color: white;
+}
+
+.profile-actions {
+    display: grid;
+    justify-items: center;
+    min-width: 0; 
+    min-height: 0;
+}
+
+.add-staff-container, .update-profile-container, .profile-container{
+  display: none;
+  grid-area: main;
+  justify-items: center;
+  background-color: lightgray;
+  overflow: scroll;
+}
+.add-staff-form, .update-profile-form, .profile-content, .change-password-form, .transfer-form{
+    justify-items: center;
+    display: grid;
+}
+
+.add-staff-inputs, .update-profile-inputs, .profile-description, .change-password-inputs, .transfer-inputs{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 10px;
+}
+
+.add-staff-submit, .save-profile-update, .change-password-submit, .transfer-submit{
+    padding: 10px;
+}
+
+.change-password-container{
+    display: none;
+    grid-area: main;
+    column-gap: 10px;
+    row-gap: 10px;
+    grid-template-rows: auto;
+    justify-items: center;
+    border-style: solid;
+    border-color: green;
+    background-color: lightgray;
+    overflow: scroll;
+}
+
+.change-password-submit{
+    height: 40px;
+}
+
+a:link,
+a:visited {
+    background-color: darkgreen;
+    color: white;
+    text-decoration: none;
+}
+
+a:hover,
+a:active {
+    background-color: green;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+.column {
+    float: left;
+    width: 100%;
+    padding: 0 8px;
+}
+
+@media screen and (max-width: 650px) {
+    .column {
+        width: 100%;
+        display: block;
+    }
+}
+
+.Manage-staff-container{
+    grid-area: main;
+    display: none;
+    overflow: scroll;
+    background-color: lightgray;
+}
+.Manage-staff-label{
+    justify-self: center;
+}
+
+.Manage-staff-card {
+    box-shadow: 0 4px 8px 0 rgba(10, 10, 10, 0.2);
+    color: black;
+    background-image: linear-gradient(rgb(86, 172, 86), white);
+}
+
+.Manage-staff-table {
+    padding: 0 16px;
+}
+
+.Manage-staff-table::after,
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.Manage-staff-title {
+    color: rgb(168, 80, 80);
+}
+
+button{
+    border: none;
+    outline: 0;
+    padding: 8px;
+    color: white;
+    background-color: darkgreen;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5%;
+}
+
+.Manage-staff-button {
+    width: 100%;
+}
+
+
+.transaction-history-container{
+    grid-area: main;
+    display: none;
+    grid-template-rows: 1fr 9fr;
+    background-color: lightgray;
+    overflow: scroll;
+    padding: 10px;
+}
+.Transaction-label{
+    justify-self: center;
+    text-align: center;
+}
+.transaction-table {
+    justify-self: center;
+}
+.add-staff-button{
+    background-color: green;
+    border: 2px solid black;
+    color: white;
+    padding: 15px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition-duration: 0.2s;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+table,
+th,
+td {
+    border: 1px solid black;
+    text-align: center;
+}
+TH {
+    background-color: darkgreen;
+    color: #ffffff;
+}
+th {
+    height: 50px;
+}
+tbody tr:nth-child(odd) {
+    background: lightgrey;
+}
+tbody tr:nth-child(even) {
+    background: white;
+}
