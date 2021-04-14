@@ -1,5 +1,0 @@
-This is a file edited at local.
-
-First Pull request from "Creating-First-Branch".
-
-Changed by Dan Manolache.
