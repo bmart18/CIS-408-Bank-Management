@@ -1,38 +1,12 @@
 # CIS-434-Bank-Management-System
 
-### Possible Features
-Add Staff:
-- First name
-- Last Name
-- Gender
-- DOB
-- Employee ID
-- Email
-- Phone number
-- Account number
-- Username
-- Password
-- PIN
-- Admin privilegdes
+This semester long project was made for CIS 434 Software Engineering
 
-News boards
-- Admins will be able to post news for staff members
+In this project we aimed to create a Bank Management system that allowed admins to transfer their money, look at profile details, see Transaction History, as well as contact info for staff.
 
-Logout button
+To do this project we used a wide range of languages including PHP, JavaScript, HTML, and CSS.
+To store information in this project a database was used hosted on Amazon Web Services (AWS).
+To host the website we used Xampp with Apache.
+To test the website for load and bugs we used Apache JMeter.
 
-Manage Staff
-- Add
-- Remove
-- Edit
-
-Change Withdraw to Transfer
-- Add section where you have a dropdown with the possible accounts
-- Or have user input
-
-Profile
-- Everything listed in add staff
-- Change password/PIN
-
-Transaction history
-- show 10 most recent transactions
-- allow user to select time frame for transactions
+A walkthrough/explanation of the project can be found here: https://youtu.be/hLBlPArJyLs
