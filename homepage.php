@@ -9,7 +9,6 @@ if (!isset($_SESSION['loggedin'])) {
 	header('Location: index.html');
 	exit;
 }
-
 global $savingsbalance;
 global $checkingsbalance;
 global $firstname;
@@ -23,14 +22,7 @@ global $occupation;
 $id = $_SESSION['id'];
 
 
-
-if ( mysqli_connect_errno() ) {
-	// If there is an error with the connection, stop the script and display the error.
-	exit('Failed to connect to MySQL: ' . mysqli_connect_error());
-}
-
-
-$sql = "SELECT savingsbalance, checkingbalance FROM AccountTable WHERE USERID = $id";
+$sql = "SELECT savingsbalance, checkingbalance FROM AccountTable WHERE USERID = $id"; //get account data
 $result = $con->query($sql);
 $followingdata = $result -> fetch_assoc();
 	if ($result->num_rows > 0) {
@@ -40,7 +32,7 @@ $followingdata = $result -> fetch_assoc();
 		$_SESSION['USERcheckingsbalance'] = $checkingbalance;
 	}
 
-	$sql = "SELECT FNAME, LNAME, BDATE, GENDER, ADDRESS,  MOBILENUMBER, OCCUPATION FROM ProfileTable WHERE USERID = $id";
+	$sql = "SELECT FNAME, LNAME, BDATE, GENDER, ADDRESS,  MOBILENUMBER, OCCUPATION FROM ProfileTable WHERE USERID = $id"; //get user info
 	$result = $con->query($sql);
 	$followingdata = $result -> fetch_assoc();
 		if ($result->num_rows > 0) {
@@ -54,7 +46,7 @@ $followingdata = $result -> fetch_assoc();
 
 		}
 
-$GETTransaction = "SELECT DateofTransaction, TypeofAccount, SenttoUser, TransactionAmount, CurrentBalance FROM TransactionHistory WHERE USERID = $id";
+$GETTransaction = "SELECT DateofTransaction, TypeofAccount, SenttoUser, TransactionAmount, CurrentBalance FROM TransactionHistory WHERE USERID = $id"; // get Transaction data
 $TransactionTable = array();
 $response = mysqli_query($con, $GETTransaction);
 while($row = mysqli_fetch_array($response)){
@@ -83,7 +75,7 @@ while($row = mysqli_fetch_array($response)){
     <div class="container">
         <div class="header-container">
 
-            <h1 class="title">Welcome to CIS Banking!</h1>
+            <h1 class="title">Welcome to 408 Bank!</h1>
 
             <a class="logout" href="logout.php">Logout</a>
 
@@ -285,9 +277,9 @@ while($row = mysqli_fetch_array($response)){
                 <div class="column">
                     <div class="Manage-staff-card">
                         <div class="Manage-staff-table">
-                            <h2>Abdul Mohamed</h2>
+                            <h2>Alexander Sukennyk</h2>
                             <p class="Manage-staff-title">Branch Manager</p>
-                            <p>User ID: 2677918</p>
+                            <p>User ID: 2717393</p>
                             <p>Address: 3321 Castle, SPrig, TX</p>
                             <p>Mobile Number: 216-434-1234</p>
                             <p><button class="Manage-staff-button">Contact</button></p>
@@ -300,9 +292,9 @@ while($row = mysqli_fetch_array($response)){
                 <div class="column">
                     <div class="Manage-staff-card">
                         <div class="Manage-staff-table">
-                            <h2>Dan Manolache</h2>
+                            <h2>Zane Rhia</h2>
                             <p class="Manage-staff-title">Accountant</p>
-                            <p>User ID: 2689960</p>
+                            <p>User ID: 2713423</p>
                             <p>Address: 5631 Rice, Houston, TX</p>
                             <p>Mobile Number: 216-123-4567</p>
                             <p><button class="Manage-staff-button">Contact</button></p>
@@ -317,7 +309,7 @@ while($row = mysqli_fetch_array($response)){
                         <div class="Manage-staff-table">
                             <h2>Bradley Martin</h2>
                             <p class="Manage-staff-title">Financial Analyst</p>
-                            <p>User ID: 2714857</p>
+                            <p>User ID: 2713659</p>
                             <p>Address: 100 Alfred Lane, Cleveland, Oh</p>
                             <p>Mobile Number: 216-555-6987</p>
                             <p><button class="Manage-staff-button">Contact</button></p>
@@ -357,7 +349,7 @@ while($row = mysqli_fetch_array($response)){
 
         <div class="footer-container">
             <footer class="wrapper">
-                <h3>Something Wrong? Contact us at 1-800-CIS-Bank</h3>
+                <h3>Something Wrong? Contact us at 1-800-408-Bank</h3>
             </footer>
         </div>
 
