@@ -1,6 +1,6 @@
 # CIS-434-Bank-Management-System
 
-This semester long project was made for CIS 434 Software Engineering
+This semester long project was made for CIS 408 Internet Programming
 
 In this project we aimed to create a Bank Management system that allowed admins to transfer their money, look at profile details, see Transaction History, as well as contact info for staff.
 
@@ -11,4 +11,3 @@ To store information in this project a database was used hosted on Amazon Web Se
 To host the website we used Xampp with Apache.
 To test the website for load and bugs we used Apache JMeter.
 
-A walkthrough/explanation of the project can be found here: https://youtu.be/hLBlPArJyLs
