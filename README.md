@@ -1,4 +1,4 @@
-# CIS-434-Bank-Management-System
+# CIS-408-Bank-Management-System
 
 This semester long project was made for CIS 408 Internet Programming
 
