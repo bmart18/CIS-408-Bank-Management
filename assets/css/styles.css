@@ -3,7 +3,7 @@
 }
 
 body{
-    background-color: green;
+    background-color: #2b3ca0;
 }
 
 .login-div {
@@ -48,7 +48,7 @@ body{
     font-size: 18px;
     padding: 10px 20px 10px 5px;
     border:none;
-    outline: none; 
+    outline: none;
     background: none;
 }
 
@@ -81,7 +81,7 @@ button.signin-btn{
     border: none;
     font-size: 18;
     border-radius: 30px;
-    background-color: green;
+    background-color: #2b3ca0;
     color: white;
     margin-bottom: 10px;
 }
