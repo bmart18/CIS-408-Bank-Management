@@ -218,6 +218,7 @@ button{
     outline: 0;
     padding: 8px;
     color: white;
+    background-color: gray;
     text-align: center;
     cursor: pointer;
     border-radius: 5%;

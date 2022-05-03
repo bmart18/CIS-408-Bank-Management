@@ -22,14 +22,14 @@ global $occupation;
 $id = $_SESSION['id'];
 
 
-$sql = "SELECT savingsbalance, checkingbalance FROM AccountTable WHERE USERID = $id"; //get account data
+$sql = "SELECT savingsbalance, checkingsbalance FROM AccountTable WHERE USERID = $id"; //get account data
 $result = $con->query($sql);
 $followingdata = $result -> fetch_assoc();
 	if ($result->num_rows > 0) {
 		$savingsbalance = $followingdata["savingsbalance"] ;
-		$checkingbalance = $followingdata["checkingbalance"] ;
+		$checkingsbalance = $followingdata["checkingsbalance"] ;
 		$_SESSION['USERsavingsbalance'] = $savingsbalance;
-		$_SESSION['USERcheckingsbalance'] = $checkingbalance;
+		$_SESSION['USERcheckingsbalance'] = $checkingsbalance;
 	}
 
 	$sql = "SELECT FNAME, LNAME, BDATE, GENDER, ADDRESS,  MOBILENUMBER, OCCUPATION FROM ProfileTable WHERE USERID = $id"; //get user info
@@ -259,7 +259,7 @@ while($row = mysqli_fetch_array($response)){
                 <h1>Current Balance</h1>
                 <div class="accounts">
                     <div class="accounts-balance">
-                        Checking: <?php echo $checkingbalance; ?>
+                        Checking: <?php echo $checkingsbalance; ?>
                     </div>
 
                     <div class="savings-balance">
@@ -292,7 +292,7 @@ while($row = mysqli_fetch_array($response)){
                 <div class="column">
                     <div class="Manage-staff-card">
                         <div class="Manage-staff-table">
-                            <h2>Zane Rhia</h2>
+                            <h2>Zane Riha</h2>
                             <p class="Manage-staff-title">Accountant</p>
                             <p>User ID: 2713423</p>
                             <p>Address: 5631 Rice, Houston, TX</p>

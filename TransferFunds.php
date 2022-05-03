@@ -26,19 +26,19 @@ if($_POST['transfer-amount'] > $_SESSION['USERcheckingsbalance']){
   	exit('Failed to connect to MySQL: ' . mysqli_connect_error());
   }
   //add the amount transfered to the selected user but before we do that we need to know the other persons data
-  $sqlgetseconduseramount = "SELECT checkingbalance FROM AccountTable WHERE USERID = $transferid";
+  $sqlgetseconduseramount = "SELECT checkingsbalance FROM AccountTable WHERE USERID = $transferid";
 
   $result = $con->query($sqlgetseconduseramount);
 
   //if the user exists, get their new amount. if not tell the person they messed up and ship them back
 		if (mysqli_num_rows($result) > 0) {
       	$followingdata = $result -> fetch_assoc();
-        $seconduseramount = $followingdata['checkingbalance'] + $transferamount;
+        $seconduseramount = $followingdata['checkingsbalance'] + $transferamount;
         $date = date("Y-m-d");
-        $name = 'checkings';
+        $name = 'Checkings';
           //subtract the amount transfering from the current user
           $newbalancecurrentuser = ($_SESSION['USERcheckingsbalance'] - $_POST['transfer-amount']);
-          $sqlsubtractuser = "UPDATE AccountTable SET checkingbalance = $newbalancecurrentuser  WHERE USERID = $id";
+          $sqlsubtractuser = "UPDATE AccountTable SET checkingsbalance = $newbalancecurrentuser  WHERE USERID = $id";
           $con->query($sqlsubtractuser);
 
           $subtractedamount = '-$' + strval($transferamount);
@@ -46,7 +46,7 @@ if($_POST['transfer-amount'] > $_SESSION['USERcheckingsbalance']){
           $con->query($sqlsubtractusertransaction);
 
           //now update database for the user that got sent money AND GIVE A TRANSACTIOn REPORT FOR THAT USER
-          $sqladduser = "UPDATE AccountTable SET checkingbalance = $seconduseramount WHERE USERID = $transferid";
+          $sqladduser = "UPDATE AccountTable SET checkingsbalance = $seconduseramount WHERE USERID = $transferid";
           $con->query($sqladduser);
 
           $addedamount = '+$' + strval($transferamount);
