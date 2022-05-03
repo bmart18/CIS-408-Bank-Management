@@ -15,7 +15,7 @@ html, body {
 .header-container {
     grid-area: header;
     display: grid;
-    background-color: #172b9e;
+    background-color: #2b3ca0;
     grid-template-columns: 7fr 2fr 1fr;
     grid-template-rows: 6fr 4fr;
     grid-template-areas: "welcome . logout" "options options options";
@@ -24,7 +24,7 @@ html, body {
 .options {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    background-color: #172b9e;
+    background-color: gray;
     color: white;
     justify-items: center;
     align-items: center;
@@ -44,7 +44,7 @@ html, body {
     justify-self: center;
     align-self: center;
     padding: 5px;
-    background-color: white;
+    background-color: gray;
     border-radius: 5px;
     border-style: solid;
     border-color: white;
@@ -59,7 +59,6 @@ html, body {
     row-gap: 15px;
     justify-items: center;
     border-style: solid;
-    border-color: #2b3ca0;
     overflow: scroll;
 }
 
@@ -83,7 +82,7 @@ html, body {
 
 .aside-container {
     grid-area: aside;
-    background-color: #5e679c;
+    background-color: lightgray;
     border-style: solid;
     border-color: black;
 }
@@ -151,7 +150,6 @@ html, body {
 
 a:link,
 a:visited {
-    background-color: #5e679c;
     color: white;
     text-decoration: none;
 }
@@ -220,7 +218,6 @@ button{
     outline: 0;
     padding: 8px;
     color: white;
-    background-color: #5e679c;
     text-align: center;
     cursor: pointer;
     border-radius: 5%;

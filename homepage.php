@@ -64,7 +64,7 @@ while($row = mysqli_fetch_array($response)){
 
 <head>
 
-    <title>CIS434 Bank</title>
+    <title>408 Bank</title>
     <link rel="stylesheet" href="assets/css/main.css">
     <script src="assets/js/main.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
