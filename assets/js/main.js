@@ -1,4 +1,4 @@
-function toggle_main(){
+function toggle_main(){ 
     var x = document.getElementsByClassName(arguments[0]);
     //list of containers
     containers = ['transfer-container', 'profile-container', 'change-password-container', 'Manage-staff-container', 'transaction-history-container', 'add-staff-container','update-profile-container']
